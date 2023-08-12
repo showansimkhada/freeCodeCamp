@@ -1,0 +1,37 @@
+html, #header {
+    background-color: pink;
+  }
+  
+  #header {
+    width: 100vw;
+    height: 5%;
+    top: 0;
+    right: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+  }
+  
+  #header-img {
+    width: 200px;
+  }
+  
+  #nav-bar {
+    text-align: right;
+    font-size: 1.5rem;
+  }
+  
+  .bodys {
+    position: relative;
+    top: 50px;
+    text-align: center;
+  }
+  
+  hr {
+    border: none;
+  }
+  
+  @media (max-width: 450px){
+  
+  }
