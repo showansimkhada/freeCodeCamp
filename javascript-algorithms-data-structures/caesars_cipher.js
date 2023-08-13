@@ -6,7 +6,7 @@ function rot13(str) {
         if (array[i].match(regex)) {
             let x = array[i].charCodeAt() + 13
             if (x > 90) {
-                y = x - 90;
+                let y = x - 90;
                 y += 64
                 x = y
             } 
