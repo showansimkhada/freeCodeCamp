@@ -1,4 +1,8 @@
 function telephoneCheck(str) {
+    if (str[0].match("[-]")) {
+        // console.log("checking for -")
+        return false
+    } 
     let array = str.split("")
     let result = ''
     let num = []
@@ -27,10 +31,7 @@ function telephoneCheck(str) {
     if (result.length === 10 && result[0].match("[2-5]")) {
         return true
     } else if (result.length > 10) {
-        if (result[0].match("[-]")) {
-            // console.log("checking for -")
-            return false
-        } else if (num.length === 11){
+        if (num.length === 11){
             // console.log("checking for country code");
             if (result[0].match('[1]') && num[0] == 1) {
                 return true
