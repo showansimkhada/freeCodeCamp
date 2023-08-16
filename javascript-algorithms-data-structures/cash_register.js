@@ -24,12 +24,12 @@ function checkCashRegister(price, cash, cid) {
                     var x = coins(ret, tCash, val);
                     // console.log(x)
                     if (x >= val){
-                        obj.change.push(["ONE HUNDERED", x]);
+                        obj.change.push(["ONE HUNDRED", x]);
                         ret = ret - x;
                         ret = ret.toFixed(2);
                         array[i][1] = array[i][1] - x;
                     } else if (tCash == 0 ) {
-                        obj.change.push(["ONE HUNDERED", tCash]);
+                        obj.change.push(["ONE HUNDRED", tCash]);
                     }
                     break;
                 case "TWENTY":
@@ -155,7 +155,8 @@ function checkCashRegister(price, cash, cid) {
         obj.change= []
     }
     if (z === 0) {
-        obj.status = "CLOSED"
+        obj.status = "CLOSED";
+        obj.change.reverse();
     }
     return obj;
 }
@@ -177,13 +178,13 @@ function coins(ret, tCash, val) {
 
 
 console.log("EXPECTED", "======================================", "ACTUAL")
-// let x = checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
-// console.log(JSON.stringify(x), "===", {status: "OPEN", change: [["QUARTER", 0.5]]})
-// x =  checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
-// console.log(JSON.stringify(x), "===", {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]})
-// x = checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
-// console.log(JSON.stringify(x), "===", {status: "INSUFFICIENT_FUNDS", change: []});
-// x = checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
-// console.log(JSON.stringify(x), "===", {status: "INSUFFICIENT_FUNDS", change: []});
+let x = checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
+console.log(JSON.stringify(x), "===", {status: "OPEN", change: [["QUARTER", 0.5]]})
+x =  checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
+console.log(JSON.stringify(x), "===", {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]})
+x = checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
+console.log(JSON.stringify(x), "===", {status: "INSUFFICIENT_FUNDS", change: []});
+x = checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
+console.log(JSON.stringify(x), "===", {status: "INSUFFICIENT_FUNDS", change: []});
 x = checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
 console.log(JSON.stringify(x), "===", {status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]});
