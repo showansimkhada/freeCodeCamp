@@ -1,37 +1,19 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-.DS_Store
-
 # dependencies
-/front_end_development_libraries/drum_machine/node_modules/
-/front_end_development_libraries/drum_machine/.pnp
-/front_end_development_libraries/drum_machine/.pnp.js
 
 # testing
-/front_end_development_libraries/drum_machine/coverage
 
 # next.js
-/front_end_development_libraries/drum_machine/.next/
-/front_end_development_libraries/drum_machine/out/
 
 # production
-/front_end_development_libraries/drum_machine/build
 
 # misc
-/front_end_development_libraries/drum_machine.DS_Store
-/front_end_development_libraries/drum_machine*.pem
 
 # debug
-/front_end_development_libraries/drum_machine/npm-debug.log*
-/front_end_development_libraries/drum_machine/yarn-debug.log*
-/front_end_development_libraries/drum_machine/yarn-error.log*
 
 # local env files
-/front_end_development_libraries/drum_machine/.env*.local
 
 # vercel
-/front_end_development_libraries/drum_machine/.vercel
 
 # typescript
-/front_end_development_libraries/drum_machine/*.tsbuildinfo
-/front_end_development_libraries/drum_machine/next-env.d.ts
