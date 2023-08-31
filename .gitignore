@@ -1,37 +1,35 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/front_end_development_libraries/markdown_previewer/node_modules
-/front_end_development_libraries/markdown_previewer/.pnp
-/front_end_development_libraries/markdown_previewer/.pnp.js
+/front-end-development-libraries/markdown_previewer/node_modules
+/front-end-development-libraries/markdown_previewer/.pnp
+/front-end-development-libraries/markdown_previewer/.pnp.js
 
 # testing
-/front_end_development_libraries/markdown_previewer/coverage
+/front-end-development-libraries/markdown_previewer/coverage
 
 # next.js
-/front_end_development_libraries/markdown_previewer/.next/
-/front_end_development_libraries/markdown_previewer/out/
+/front-end-development-libraries/markdown_previewer/.next/
+/front-end-development-libraries/markdown_previewer/out/
 
 # production
-/front_end_development_libraries/markdown_previewer/build
+/front-end-development-libraries/markdown_previewer/build
 
 # misc
-/front_end_development_libraries/markdown_previewer/*DS_Store
-/front_end_development_libraries/markdown_previewer/*.pem
+/front-end-development-libraries/markdown_previewer/*DS_Store
+/front-end-development-libraries/markdown_previewer/*.pem
 
 # debug
-/front_end_development_libraries/markdown_previewer/npm-debug.log*
-/front_end_development_libraries/markdown_previewer/yarn-debug.log*
-/front_end_development_libraries/markdown_previewer/yarn-error.log*
+/front-end-development-libraries/markdown_previewer/npm-debug.log*
+/front-end-development-libraries/markdown_previewer/yarn-debug.log*
+/front-end-development-libraries/markdown_previewer/yarn-error.log*
 
 # local env files
-/front_end_development_libraries/markdown_previewer/.env*.local
+/front-end-development-libraries/markdown_previewer/.env*.local
 
 # vercel
-/front_end_development_libraries/markdown_previewer/.vercel
+/front-end-development-libraries/markdown_previewer/.vercel
 
 # typescript
-/front_end_development_libraries/markdown_previewer/*.tsbuildinfo
-/front_end_development_libraries/markdown_previewer/next-env.d.ts
-
-/front_end_development_libraries/markdown_previewer/.gitignore
+/front-end-development-libraries/markdown_previewer/*.tsbuildinfo
+/front-end-development-libraries/markdown_previewer/next-env.d.ts
