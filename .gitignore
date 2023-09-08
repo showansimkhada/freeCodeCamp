@@ -76,38 +76,38 @@
 # 25 + 5 Clock
 
 # dependencies
-/front-end-development-libraries/clock/node_modules
-/front-end-development-libraries/clock/.pnp
-/front-end-development-libraries/clock/.pnp.js
+/front-end-development-libraries/stop_clock/node_modules
+/front-end-development-libraries/stop_clock/.pnp
+/front-end-development-libraries/stop_clock/.pnp.js
 
 # testing
-/front-end-development-libraries/clock/coverage
+/front-end-development-libraries/stop_clock/coverage
 
 # next.js
-/front-end-development-libraries/clock/.next/
+/front-end-development-libraries/stop_clock/.next/
 
 # next.js
-/front-end-development-libraries/clock/.next/
-/front-end-development-libraries/clock/out/
+/front-end-development-libraries/stop_clock/.next/
+/front-end-development-libraries/stop_clock/out/
 
 # production
-/front-end-development-libraries/clock/build
+/front-end-development-libraries/stop_clock/build
 
 # misc
-/front-end-development-libraries/markdown_previewer/*DS_Store
-/front-end-development-libraries/markdown_previewer/*.pem
+/front-end-development-libraries/stop_clock/*DS_Store
+/front-end-development-libraries/stop_clock/*.pem
 
 # debug
-/front-end-development-libraries/clock/npm-debug.log*
-/front-end-development-libraries/clock/yarn-debug.log*
-/front-end-development-libraries/clock/yarn-error.log*
+/front-end-development-libraries/stop_clock/npm-debug.log*
+/front-end-development-libraries/stop_clock/yarn-debug.log*
+/front-end-development-libraries/stop_clock/yarn-error.log*
 
 # local env files
-/front-end-development-libraries/clock/.env*.local
+/front-end-development-libraries/stop_clock/.env*.local
 
 # vercel
-/front-end-development-libraries/clock/.vercel
+/front-end-development-libraries/stop_clock/.vercel
 
 # typescript
-/front-end-development-libraries/clock/*.tsbuildinfo
-/front-end-development-libraries/clock/next-env.d.ts
+/front-end-development-libraries/stop_clock/*.tsbuildinfo
+/front-end-development-libraries/stop_clock/next-env.d.ts
