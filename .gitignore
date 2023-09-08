@@ -72,3 +72,42 @@
 # typescript
 /front-end-development-libraries/drum_machine/*.tsbuildinfo
 /front-end-development-libraries/drum_machine/next-env.d.ts
+
+# 25 + 5 Clock
+
+# dependencies
+/front-end-development-libraries/clock/node_modules
+/front-end-development-libraries/clock/.pnp
+/front-end-development-libraries/clock/.pnp.js
+
+# testing
+/front-end-development-libraries/clock/coverage
+
+# next.js
+/front-end-development-libraries/clock/.next/
+
+# next.js
+/front-end-development-libraries/clock/.next/
+/front-end-development-libraries/clock/out/
+
+# production
+/front-end-development-libraries/clock/build
+
+# misc
+/front-end-development-libraries/markdown_previewer/*DS_Store
+/front-end-development-libraries/markdown_previewer/*.pem
+
+# debug
+/front-end-development-libraries/clock/npm-debug.log*
+/front-end-development-libraries/clock/yarn-debug.log*
+/front-end-development-libraries/clock/yarn-error.log*
+
+# local env files
+/front-end-development-libraries/clock/.env*.local
+
+# vercel
+/front-end-development-libraries/clock/.vercel
+
+# typescript
+/front-end-development-libraries/clock/*.tsbuildinfo
+/front-end-development-libraries/clock/next-env.d.ts
