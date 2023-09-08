@@ -21,4 +21,10 @@
         <li>SASS(Syntactically Awesome StyleSheets)</li>
         <li>React and Redux</li>
     </ol>
+    <h2>Data Visualization</h2>
+    <ol>
+        <li>D3</li>
+        <li>APIs</li>
+        <li>AJAX</li>
+    </ol> 
 </div>
