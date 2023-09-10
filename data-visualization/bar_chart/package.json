@@ -18,6 +18,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "author": "showan",
+  "license": "MIT",
   "eslintConfig": {
     "extends": [
       "react-app",
