@@ -1,150 +1,99 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Markdown Previewer
 # dependencies
 /front-end-development-libraries/markdown_previewer/node_modules
 /front-end-development-libraries/markdown_previewer/.pnp
 /front-end-development-libraries/markdown_previewer/.pnp.js
+/front-end-development-libraries/drum_machine/node_modules
+/front-end-development-libraries/drum_machine/.pnp
+/front-end-development-libraries/drum_machine/.pnp.js
+/front-end-development-libraries/stop_clock/node_modules
+/front-end-development-libraries/stop_clock/.pnp
+/front-end-development-libraries/stop_clock/.pnp.js
+/data-visualization/bar_chart/node_modules
+/data-visualization/bar_chart/.pnp
+/data-visualization/bar_chart/.pnp.js
+/data-visualization/scatterplot_graph/node_modules
+/data-visualization/scatterplot_graph/.pnp
+/data-visualization/scatterplot_graph/.pnp.js
 
 # testing
 /front-end-development-libraries/markdown_previewer/coverage
+/front-end-development-libraries/drum_machine/coverage
+/front-end-development-libraries/stop_clock/coverage
+/data-visualization/bar_chart/coverage
+/data-visualization/scatterplot_graph/coverage
 
 # next.js
 /front-end-development-libraries/markdown_previewer/.next/
 /front-end-development-libraries/markdown_previewer/out/
+/front-end-development-libraries/drum_machine/.next/
+/front-end-development-libraries/drum_machine/out/
+/front-end-development-libraries/stop_clock/.next/
+/front-end-development-libraries/stop_clock/out/
+/data-visualization/bar_chart/.next/
+/data-visualization/bar_chart/out/
+/data-visualization/scatterplot_graph/.next/
+/data-visualization/scatterplot_graph/out/
 
 # production
 /front-end-development-libraries/markdown_previewer/build
+/front-end-development-libraries/drum_machine/build
+/front-end-development-libraries/stop_clock/build
+/data-visualization/bar_chart/build
+/data-visualization/scatterplot_graph/build
 
 # misc
 /front-end-development-libraries/drum_machine/*DS_Store
 /front-end-development-libraries/drum_machine/*.pem
+/front-end-development-libraries/markdown_previewer/*DS_Store
+/front-end-development-libraries/markdown_previewer/*.pem
+/front-end-development-libraries/stop_clock/*DS_Store
+/front-end-development-libraries/stop_clock/*.pem
+/data-visualization/bar_chart/*DS_Store
+/data-visualization/bar_chart/*.pem
+/data-visualization/scatterplot_graph/*DS_Store
+/data-visualization/scatterplot_graph/*.pem
 
 # debug
 /front-end-development-libraries/markdown_previewer/npm-debug.log*
 /front-end-development-libraries/markdown_previewer/yarn-debug.log*
 /front-end-development-libraries/markdown_previewer/yarn-error.log*
+/front-end-development-libraries/drum_machine/npm-debug.log*
+/front-end-development-libraries/drum_machine/yarn-debug.log*
+/front-end-development-libraries/drum_machine/yarn-error.log*
+/front-end-development-libraries/stop_clock/npm-debug.log*
+/front-end-development-libraries/stop_clock/yarn-debug.log*
+/front-end-development-libraries/stop_clock/yarn-error.log*
+/data-visualization/bar_chart/npm-debug.log*
+/data-visualization/bar_chart/yarn-debug.log*
+/data-visualization/bar_chart/yarn-error.log*
+/data-visualization/scatterplot_graph/npm-debug.log*
+/data-visualization/scatterplot_graph/yarn-debug.log*
+/data-visualization/scatterplot_graph/yarn-error.log*
 
 # local env files
 /front-end-development-libraries/markdown_previewer/.env*.local
+/front-end-development-libraries/drum_machine/.env*.local
+/front-end-development-libraries/stop_clock/.env*.local
+/data-visualization/bar_chart/.env*.local
+/data-visualization/scatterplot_graph/.env*.local
 
 # vercel
 /front-end-development-libraries/markdown_previewer/.vercel
+/front-end-development-libraries/drum_machine/.vercel
+/front-end-development-libraries/stop_clock/.vercel
+/data-visualization/bar_chart/.vercel
+/data-visualization/scatterplot_graph/.vercel
 
 # typescript
 /front-end-development-libraries/markdown_previewer/*.tsbuildinfo
 /front-end-development-libraries/markdown_previewer/next-env.d.ts
-
-# Drum Machine
-# dependencies
-/front-end-development-libraries/drum_machine/node_modules
-/front-end-development-libraries/drum_machine/.pnp
-/front-end-development-libraries/drum_machine/.pnp.js
-
-# testing
-/front-end-development-libraries/drum_machine/coverage
-
-# next.js
-/front-end-development-libraries/drum_machine/.next/
-
-# next.js
-/front-end-development-libraries/drum_machine/.next/
-/front-end-development-libraries/drum_machine/out/
-
-# production
-/front-end-development-libraries/drum_machine/build
-
-# misc
-/front-end-development-libraries/markdown_previewer/*DS_Store
-/front-end-development-libraries/markdown_previewer/*.pem
-
-# debug
-/front-end-development-libraries/drum_machine/npm-debug.log*
-/front-end-development-libraries/drum_machine/yarn-debug.log*
-/front-end-development-libraries/drum_machine/yarn-error.log*
-
-# local env files
-/front-end-development-libraries/drum_machine/.env*.local
-
-# vercel
-/front-end-development-libraries/drum_machine/.vercel
-
-# typescript
 /front-end-development-libraries/drum_machine/*.tsbuildinfo
 /front-end-development-libraries/drum_machine/next-env.d.ts
-
-# 25 + 5 Clock
-# dependencies
-/front-end-development-libraries/stop_clock/node_modules
-/front-end-development-libraries/stop_clock/.pnp
-/front-end-development-libraries/stop_clock/.pnp.js
-
-# testing
-/front-end-development-libraries/stop_clock/coverage
-
-# next.js
-/front-end-development-libraries/stop_clock/.next/
-
-# next.js
-/front-end-development-libraries/stop_clock/.next/
-/front-end-development-libraries/stop_clock/out/
-
-# production
-/front-end-development-libraries/stop_clock/build
-
-# misc
-/front-end-development-libraries/stop_clock/*DS_Store
-/front-end-development-libraries/stop_clock/*.pem
-
-# debug
-/front-end-development-libraries/stop_clock/npm-debug.log*
-/front-end-development-libraries/stop_clock/yarn-debug.log*
-/front-end-development-libraries/stop_clock/yarn-error.log*
-
-# local env files
-/front-end-development-libraries/stop_clock/.env*.local
-
-# vercel
-/front-end-development-libraries/stop_clock/.vercel
-
-# typescript
 /front-end-development-libraries/stop_clock/*.tsbuildinfo
 /front-end-development-libraries/stop_clock/next-env.d.ts
-
-# Data visualization
-# dependencies
-/data-visualization/bar_chart/node_modules
-/data-visualization/bar_chart/.pnp
-/data-visualization/bar_chart/.pnp.js
-
-# testing
-/data-visualization/bar_chart/coverage
-
-# next.js
-/data-visualization/bar_chart/.next/
-
-# next.js
-/data-visualization/bar_chart/.next/
-/data-visualization/bar_chart/out/
-
-# production
-/data-visualization/bar_chart/build
-
-# misc
-/data-visualization/bar_chart/*DS_Store
-/data-visualization/bar_chart/*.pem
-
-# debug
-/data-visualization/bar_chart/npm-debug.log*
-/data-visualization/bar_chart/yarn-debug.log*
-/data-visualization/bar_chart/yarn-error.log*
-
-# local env files
-/data-visualization/bar_chart/.env*.local
-
-# vercel
-/data-visualization/bar_chart/.vercel
-
-# typescript
 /data-visualization/bar_chart/*.tsbuildinfo
 /data-visualization/bar_chart/next-env.d.ts
+/data-visualization/scatterplot_graph/*.tsbuildinfo
+/data-visualization/scatterplot_graph/next-env.d.ts
