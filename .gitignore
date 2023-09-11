@@ -16,6 +16,9 @@
 /data-visualization/scatterplot_graph/node_modules
 /data-visualization/scatterplot_graph/.pnp
 /data-visualization/scatterplot_graph/.pnp.js
+/data-visualization/heat_map/node_modules
+/data-visualization/heat_map/.pnp
+/data-visualization/heat_map/.pnp.js
 
 # testing
 /front-end-development-libraries/markdown_previewer/coverage
@@ -23,6 +26,7 @@
 /front-end-development-libraries/stop_clock/coverage
 /data-visualization/bar_chart/coverage
 /data-visualization/scatterplot_graph/coverage
+/data-visualization/heat_map/coverage
 
 # next.js
 /front-end-development-libraries/markdown_previewer/.next/
@@ -35,6 +39,8 @@
 /data-visualization/bar_chart/out/
 /data-visualization/scatterplot_graph/.next/
 /data-visualization/scatterplot_graph/out/
+/data-visualization/heat_map/.next/
+/data-visualization/heat_map/out/
 
 # production
 /front-end-development-libraries/markdown_previewer/build
@@ -42,6 +48,7 @@
 /front-end-development-libraries/stop_clock/build
 /data-visualization/bar_chart/build
 /data-visualization/scatterplot_graph/build
+/data-visualization/heat_map/build
 
 # misc
 /front-end-development-libraries/drum_machine/*DS_Store
@@ -54,6 +61,8 @@
 /data-visualization/bar_chart/*.pem
 /data-visualization/scatterplot_graph/*DS_Store
 /data-visualization/scatterplot_graph/*.pem
+/data-visualization/heat_map/*DS_Store
+/data-visualization/heat_map/*.pem
 
 # debug
 /front-end-development-libraries/markdown_previewer/npm-debug.log*
@@ -71,6 +80,9 @@
 /data-visualization/scatterplot_graph/npm-debug.log*
 /data-visualization/scatterplot_graph/yarn-debug.log*
 /data-visualization/scatterplot_graph/yarn-error.log*
+/data-visualization/heat_map/npm-debug.log*
+/data-visualization/heat_map/yarn-debug.log*
+/data-visualization/heat_map/yarn-error.log*
 
 # local env files
 /front-end-development-libraries/markdown_previewer/.env*.local
@@ -78,6 +90,7 @@
 /front-end-development-libraries/stop_clock/.env*.local
 /data-visualization/bar_chart/.env*.local
 /data-visualization/scatterplot_graph/.env*.local
+/data-visualization/heat_map/.env*.local
 
 # vercel
 /front-end-development-libraries/markdown_previewer/.vercel
@@ -85,6 +98,7 @@
 /front-end-development-libraries/stop_clock/.vercel
 /data-visualization/bar_chart/.vercel
 /data-visualization/scatterplot_graph/.vercel
+/data-visualization/heat_map/.vercel
 
 # typescript
 /front-end-development-libraries/markdown_previewer/*.tsbuildinfo
@@ -97,3 +111,5 @@
 /data-visualization/bar_chart/next-env.d.ts
 /data-visualization/scatterplot_graph/*.tsbuildinfo
 /data-visualization/scatterplot_graph/next-env.d.ts
+/data-visualization/heat_map/*.tsbuildinfo
+/data-visualization/heat_map/next-env.d.ts
