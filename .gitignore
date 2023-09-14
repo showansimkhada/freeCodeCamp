@@ -22,6 +22,9 @@
 /data-visualization/choropleth_map/node_modules
 /data-visualization/choropleth_map/.pnp
 /data-visualization/choropleth_map/.pnp.js
+/data-visualization/treemap_diagram/node_modules
+/data-visualization/treemap_diagram/.pnp
+/data-visualization/treemap_diagram/.pnp.js
 
 # testing
 /front-end-development-libraries/markdown_previewer/coverage
@@ -31,6 +34,7 @@
 /data-visualization/scatterplot_graph/coverage
 /data-visualization/heat_map/coverage
 /data-visualization/choropleth_map/coverage
+/data-visualization/treemap_diagram/coverage
 
 # next.js
 /front-end-development-libraries/markdown_previewer/.next/
@@ -47,6 +51,8 @@
 /data-visualization/heat_map/out/
 /data-visualization/choropleth_map/.next/
 /data-visualization/choropleth_map/out/
+/data-visualization/treemap_diagram/.next/
+/data-visualization/treemap_diagram/out/
 
 # production
 /front-end-development-libraries/markdown_previewer/build
@@ -56,6 +62,7 @@
 /data-visualization/scatterplot_graph/build
 /data-visualization/heat_map/build
 /data-visualization/choropleth_map/build
+/data-visualization/treemap_diagram/build
 
 # misc
 /front-end-development-libraries/drum_machine/*DS_Store
@@ -72,6 +79,8 @@
 /data-visualization/heat_map/*.pem
 /data-visualization/choropleth_map/*DS_Store
 /data-visualization/choropleth_map/*.pem
+/data-visualization/treemap_diagram/*DS_Store
+/data-visualization/treemap_diagram/*.pem
 
 # debug
 /front-end-development-libraries/markdown_previewer/npm-debug.log*
@@ -95,6 +104,9 @@
 /data-visualization/choropleth_map/npm-debug.log*
 /data-visualization/choropleth_map/yarn-debug.log*
 /data-visualization/choropleth_map/yarn-error.log*
+/data-visualization/treemap_diagram/npm-debug.log*
+/data-visualization/treemap_diagram/yarn-debug.log*
+/data-visualization/treemap_diagram/yarn-error.log*
 
 # local env files
 /front-end-development-libraries/markdown_previewer/.env*.local
@@ -104,6 +116,7 @@
 /data-visualization/scatterplot_graph/.env*.local
 /data-visualization/heat_map/.env*.local
 /data-visualization/choropleth_map/.env*.local
+/data-visualization/treemap_diagram/.env*.local
 
 # vercel
 /front-end-development-libraries/markdown_previewer/.vercel
@@ -113,6 +126,7 @@
 /data-visualization/scatterplot_graph/.vercel
 /data-visualization/heat_map/.vercel
 /data-visualization/choropleth_map/.vercel
+/data-visualization/treemap_diagram/.vercel
 
 # typescript
 /front-end-development-libraries/markdown_previewer/*.tsbuildinfo
@@ -129,3 +143,5 @@
 /data-visualization/heat_map/next-env.d.ts
 /data-visualization/choropleth_map/*.tsbuildinfo
 /data-visualization/choropleth_map/next-env.d.ts
+/data-visualization/treemap_diagram/*.tsbuildinfo
+/data-visualization/treemap_diagram/next-env.d.ts
