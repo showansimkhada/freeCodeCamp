@@ -66,4 +66,26 @@
         <li>APIs</li>
         <li>AJAX</li>
     </ol> 
+    <h2>Relational Database</h2>
+    <p>All the projects are created using VS Code, PostgreSQL, and the Linux / Unix command line</p>
+    <div>Projects Completed</div>
+    <ol>
+        <li>Building a Boilerplate using Bash</li>
+        <li>Learn Relational Databases by Building a Mario Database</li>
+        <li>Celestial Bodies Database</li>
+        <li>Learn Bash Scripting by Building Five Programs</li>
+        <li>Learn SQL by Building a Student Database</li>
+        <li>World Cup Database</li>
+        <li>Advanced Bash by Building a Kitty Ipsum Translator</li>
+        <li>Bash and SQL by Building a Bike Rental Shop</li>
+        <li>Salon Appointment Scheduler</li>
+        <li>Learn Nano by Building a Castle</li>
+        <li>Learn Git by Building an SQL Reference Object</li>
+        <li>Periodic Table Database</li>
+        <li>Number Guessing Game</li>
+    </ol>
+    <div>Skills</div>
+    <ol>
+        <li>Bash</li>
+    </ol> 
 </div>
