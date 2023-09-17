@@ -70,8 +70,6 @@
     <p>All the projects are created using VS Code, PostgreSQL, and the Linux / Unix command line</p>
     <div>Projects Completed</div>
     <ol>
-        <li>Building a Boilerplate using Bash</li>
-        <li>Learn Relational Databases by Building a Mario Database</li>
         <li>Celestial Bodies Database</li>
         <li>Learn Bash Scripting by Building Five Programs</li>
         <li>Learn SQL by Building a Student Database</li>
