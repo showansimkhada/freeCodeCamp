@@ -25,6 +25,9 @@
 /data-visualization/treemap_diagram/node_modules
 /data-visualization/treemap_diagram/.pnp
 /data-visualization/treemap_diagram/.pnp.js
+/back-end-development-api/timestamp_microservice/node_modules
+/back-end-development-api/timestamp_microservice/.pnp
+/back-end-development-api/timestamp_microservice/.pnp.js
 
 # testing
 /front-end-development-libraries/markdown_previewer/coverage
@@ -35,6 +38,7 @@
 /data-visualization/heat_map/coverage
 /data-visualization/choropleth_map/coverage
 /data-visualization/treemap_diagram/coverage
+/back-end-development-api/timestamp_microservice/coverage
 
 # next.js
 /front-end-development-libraries/markdown_previewer/.next/
@@ -53,6 +57,8 @@
 /data-visualization/choropleth_map/out/
 /data-visualization/treemap_diagram/.next/
 /data-visualization/treemap_diagram/out/
+/back-end-development-api/timestamp_microservice/.next/
+/back-end-development-api/timestamp_microservice/out/
 
 # production
 /front-end-development-libraries/markdown_previewer/build
@@ -63,6 +69,7 @@
 /data-visualization/heat_map/build
 /data-visualization/choropleth_map/build
 /data-visualization/treemap_diagram/build
+/back-end-development-api/timestamp_microservice/build
 
 # misc
 /front-end-development-libraries/drum_machine/*DS_Store
@@ -81,6 +88,8 @@
 /data-visualization/choropleth_map/*.pem
 /data-visualization/treemap_diagram/*DS_Store
 /data-visualization/treemap_diagram/*.pem
+/back-end-development-api/timestamp_microservice/*DS_Store
+/back-end-development-api/timestamp_microservice/*.pem
 
 # debug
 /front-end-development-libraries/markdown_previewer/npm-debug.log*
@@ -107,6 +116,9 @@
 /data-visualization/treemap_diagram/npm-debug.log*
 /data-visualization/treemap_diagram/yarn-debug.log*
 /data-visualization/treemap_diagram/yarn-error.log*
+/back-end-development-api/timestamp_microservice/npm-debug.log*
+/back-end-development-api/timestamp_microservice/yarn-debug.log*
+/back-end-development-api/timestamp_microservice/yarn-error.log*
 
 # local env files
 /front-end-development-libraries/markdown_previewer/.env*.local
@@ -117,6 +129,7 @@
 /data-visualization/heat_map/.env*.local
 /data-visualization/choropleth_map/.env*.local
 /data-visualization/treemap_diagram/.env*.local
+/back-end-development-api/timestamp_microservice/.env*.local
 
 # vercel
 /front-end-development-libraries/markdown_previewer/.vercel
@@ -127,6 +140,7 @@
 /data-visualization/heat_map/.vercel
 /data-visualization/choropleth_map/.vercel
 /data-visualization/treemap_diagram/.vercel
+/back-end-development-api/timestamp_microservice/.vercel
 
 # typescript
 /front-end-development-libraries/markdown_previewer/*.tsbuildinfo
@@ -145,3 +159,5 @@
 /data-visualization/choropleth_map/next-env.d.ts
 /data-visualization/treemap_diagram/*.tsbuildinfo
 /data-visualization/treemap_diagram/next-env.d.ts
+/back-end-development-api/timestamp_microservice/*.tsbuildinfo
+/back-end-development-api/timestamp_microservice/next-env.d.ts
