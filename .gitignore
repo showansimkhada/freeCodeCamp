@@ -1,163 +1,53 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/front-end-development-libraries/markdown_previewer/node_modules
-/front-end-development-libraries/markdown_previewer/.pnp
-/front-end-development-libraries/markdown_previewer/.pnp.js
-/front-end-development-libraries/drum_machine/node_modules
-/front-end-development-libraries/drum_machine/.pnp
-/front-end-development-libraries/drum_machine/.pnp.js
-/front-end-development-libraries/stop_clock/node_modules
-/front-end-development-libraries/stop_clock/.pnp
-/front-end-development-libraries/stop_clock/.pnp.js
-/data-visualization/bar_chart/node_modules
-/data-visualization/bar_chart/.pnp
-/data-visualization/bar_chart/.pnp.js
-/data-visualization/scatterplot_graph/node_modules
-/data-visualization/scatterplot_graph/.pnp
-/data-visualization/scatterplot_graph/.pnp.js
-/data-visualization/heat_map/node_modules
-/data-visualization/heat_map/.pnp
-/data-visualization/heat_map/.pnp.js
-/data-visualization/choropleth_map/node_modules
-/data-visualization/choropleth_map/.pnp
-/data-visualization/choropleth_map/.pnp.js
-/data-visualization/treemap_diagram/node_modules
-/data-visualization/treemap_diagram/.pnp
-/data-visualization/treemap_diagram/.pnp.js
-/back-end-development-api/timestamp_microservice/node_modules
-/back-end-development-api/timestamp_microservice/.pnp
-/back-end-development-api/timestamp_microservice/.pnp.js
+*/node_modules
+*/*/node_modules
+*/.pnp
+*/*/.pnp
+*/pnp.js
+*/*/pnp.js
 
 # testing
-/front-end-development-libraries/markdown_previewer/coverage
-/front-end-development-libraries/drum_machine/coverage
-/front-end-development-libraries/stop_clock/coverage
-/data-visualization/bar_chart/coverage
-/data-visualization/scatterplot_graph/coverage
-/data-visualization/heat_map/coverage
-/data-visualization/choropleth_map/coverage
-/data-visualization/treemap_diagram/coverage
-/back-end-development-api/timestamp_microservice/coverage
+*/coverage
+*/*/coverage
 
 # next.js
-/front-end-development-libraries/markdown_previewer/.next/
-/front-end-development-libraries/markdown_previewer/out/
-/front-end-development-libraries/drum_machine/.next/
-/front-end-development-libraries/drum_machine/out/
-/front-end-development-libraries/stop_clock/.next/
-/front-end-development-libraries/stop_clock/out/
-/data-visualization/bar_chart/.next/
-/data-visualization/bar_chart/out/
-/data-visualization/scatterplot_graph/.next/
-/data-visualization/scatterplot_graph/out/
-/data-visualization/heat_map/.next/
-/data-visualization/heat_map/out/
-/data-visualization/choropleth_map/.next/
-/data-visualization/choropleth_map/out/
-/data-visualization/treemap_diagram/.next/
-/data-visualization/treemap_diagram/out/
-/back-end-development-api/timestamp_microservice/.next/
-/back-end-development-api/timestamp_microservice/out/
+*/.next
+*/*/.next
+*/out
+*/*/out
 
 # production
-/front-end-development-libraries/markdown_previewer/build
-/front-end-development-libraries/drum_machine/build
-/front-end-development-libraries/stop_clock/build
-/data-visualization/bar_chart/build
-/data-visualization/scatterplot_graph/build
-/data-visualization/heat_map/build
-/data-visualization/choropleth_map/build
-/data-visualization/treemap_diagram/build
-/back-end-development-api/timestamp_microservice/build
+*/build
+*/*/build
 
 # misc
-/front-end-development-libraries/drum_machine/*DS_Store
-/front-end-development-libraries/drum_machine/*.pem
-/front-end-development-libraries/markdown_previewer/*DS_Store
-/front-end-development-libraries/markdown_previewer/*.pem
-/front-end-development-libraries/stop_clock/*DS_Store
-/front-end-development-libraries/stop_clock/*.pem
-/data-visualization/bar_chart/*DS_Store
-/data-visualization/bar_chart/*.pem
-/data-visualization/scatterplot_graph/*DS_Store
-/data-visualization/scatterplot_graph/*.pem
-/data-visualization/heat_map/*DS_Store
-/data-visualization/heat_map/*.pem
-/data-visualization/choropleth_map/*DS_Store
-/data-visualization/choropleth_map/*.pem
-/data-visualization/treemap_diagram/*DS_Store
-/data-visualization/treemap_diagram/*.pem
-/back-end-development-api/timestamp_microservice/*DS_Store
-/back-end-development-api/timestamp_microservice/*.pem
+*/*DS_Store
+*/*/*DS_Store
+*/*.pem
+*/*/*.pem
 
 # debug
-/front-end-development-libraries/markdown_previewer/npm-debug.log*
-/front-end-development-libraries/markdown_previewer/yarn-debug.log*
-/front-end-development-libraries/markdown_previewer/yarn-error.log*
-/front-end-development-libraries/drum_machine/npm-debug.log*
-/front-end-development-libraries/drum_machine/yarn-debug.log*
-/front-end-development-libraries/drum_machine/yarn-error.log*
-/front-end-development-libraries/stop_clock/npm-debug.log*
-/front-end-development-libraries/stop_clock/yarn-debug.log*
-/front-end-development-libraries/stop_clock/yarn-error.log*
-/data-visualization/bar_chart/npm-debug.log*
-/data-visualization/bar_chart/yarn-debug.log*
-/data-visualization/bar_chart/yarn-error.log*
-/data-visualization/scatterplot_graph/npm-debug.log*
-/data-visualization/scatterplot_graph/yarn-debug.log*
-/data-visualization/scatterplot_graph/yarn-error.log*
-/data-visualization/heat_map/npm-debug.log*
-/data-visualization/heat_map/yarn-debug.log*
-/data-visualization/heat_map/yarn-error.log*
-/data-visualization/choropleth_map/npm-debug.log*
-/data-visualization/choropleth_map/yarn-debug.log*
-/data-visualization/choropleth_map/yarn-error.log*
-/data-visualization/treemap_diagram/npm-debug.log*
-/data-visualization/treemap_diagram/yarn-debug.log*
-/data-visualization/treemap_diagram/yarn-error.log*
-/back-end-development-api/timestamp_microservice/npm-debug.log*
-/back-end-development-api/timestamp_microservice/yarn-debug.log*
-/back-end-development-api/timestamp_microservice/yarn-error.log*
+*/npm-debug.log
+*/*/npm-debug.log
+*/yarn-debug.log*
+*/*/yarn-debug.log*
+*/yarn-error.log*
+*/*/yarn-error.log*
 
 # local env files
-/front-end-development-libraries/markdown_previewer/.env*.local
-/front-end-development-libraries/drum_machine/.env*.local
-/front-end-development-libraries/stop_clock/.env*.local
-/data-visualization/bar_chart/.env*.local
-/data-visualization/scatterplot_graph/.env*.local
-/data-visualization/heat_map/.env*.local
-/data-visualization/choropleth_map/.env*.local
-/data-visualization/treemap_diagram/.env*.local
-/back-end-development-api/timestamp_microservice/.env*.local
+*/.env
+*/*/.env
+*/.env*.local
+*/*/.env*.local
 
 # vercel
-/front-end-development-libraries/markdown_previewer/.vercel
-/front-end-development-libraries/drum_machine/.vercel
-/front-end-development-libraries/stop_clock/.vercel
-/data-visualization/bar_chart/.vercel
-/data-visualization/scatterplot_graph/.vercel
-/data-visualization/heat_map/.vercel
-/data-visualization/choropleth_map/.vercel
-/data-visualization/treemap_diagram/.vercel
-/back-end-development-api/timestamp_microservice/.vercel
+*/.vercel
+*/*/.vercel
 
 # typescript
-/front-end-development-libraries/markdown_previewer/*.tsbuildinfo
-/front-end-development-libraries/markdown_previewer/next-env.d.ts
-/front-end-development-libraries/drum_machine/*.tsbuildinfo
-/front-end-development-libraries/drum_machine/next-env.d.ts
-/front-end-development-libraries/stop_clock/*.tsbuildinfo
-/front-end-development-libraries/stop_clock/next-env.d.ts
-/data-visualization/bar_chart/*.tsbuildinfo
-/data-visualization/bar_chart/next-env.d.ts
-/data-visualization/scatterplot_graph/*.tsbuildinfo
-/data-visualization/scatterplot_graph/next-env.d.ts
-/data-visualization/heat_map/*.tsbuildinfo
-/data-visualization/heat_map/next-env.d.ts
-/data-visualization/choropleth_map/*.tsbuildinfo
-/data-visualization/choropleth_map/next-env.d.ts
-/data-visualization/treemap_diagram/*.tsbuildinfo
-/data-visualization/treemap_diagram/next-env.d.ts
-/back-end-development-api/timestamp_microservice/*.tsbuildinfo
-/back-end-development-api/timestamp_microservice/next-env.d.ts
+*/*.tsbuildinfo
+*/*/*.tsbuildinfo
+*/next-env.4.ts
+*/*/next-env.4.ts
