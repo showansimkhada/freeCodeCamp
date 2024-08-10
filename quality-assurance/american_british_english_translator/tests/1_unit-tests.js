@@ -1,8 +1,7 @@
-const { request } = require('chai');
 const chai = require('chai');
 const assert = chai.assert;
 
-const Translator = require('../components/translator');
+import Translator from '../components/translator';
 let translator = new Translator();
 
 suite('Unit Tests', () => {
