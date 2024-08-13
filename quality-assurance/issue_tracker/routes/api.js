@@ -97,6 +97,12 @@ module.exports = (app) => {
       open
     } = req.body;
 
+    if (!_id) {
+      res.json({
+        error: 'missing _id'
+      })
+    }
+
     if (
       !issue_text &&
       !issue_title &&
@@ -112,20 +118,18 @@ module.exports = (app) => {
     const oldData = await ProjectModel.findOne({name: project});
     if (!oldData) {
       res.json({
-        error: "could not found project",
+        error: 'could not update', 
         _id: _id
       });
-      return;
     } else {
       const issueArray = oldData.issues.map((x) => x);
       const index = issueArray.findIndex(x => x['_id'] == _id);
       if (index === -1) {
         console.log('not found')
         res.json({
-          error: "could not found issue",
+          error: 'could not update', 
           _id: _id
         });
-        return;
       } else {
         issueArray[index]['issue_title'] = issue_title || issueArray[index]['issue_title'];
         issueArray[index]['issue_text'] = issue_text || issueArray[index]['issue_text'];
@@ -141,16 +145,14 @@ module.exports = (app) => {
         const saved = await oldData.save();
         if (!saved) {
           res.json({
-            error: "could not update",
+            error: 'could not update', 
             _id: _id
           });
-          return;
         } else {
           res.json({
             result: "successfully updated",
             _id: _id
           });
-          return;
         }
       }
     }
@@ -168,20 +170,27 @@ module.exports = (app) => {
     const oldData = await ProjectModel.findOne({name: project});
     var array = oldData.issues.map((x) => x);
     var index = array.findIndex(x => x['_id'] == _id);
-    var da = [...array.slice(0, index),
-      ...array.slice(index+1)]
-    oldData.issues = da;
-    const saved = await oldData.save();
-    if (!saved) {
+    if (index === -1) {
       res.json({
-        error: "cannot saved data",
+        error: 'could not delete',
         _id: _id
-      });
+      })
     } else {
-      res.json({
-        result: "successfully deleted",
-        _id: _id
-      });
+      var da = [...array.slice(0, index),
+        ...array.slice(index+1)]
+      oldData.issues = da;
+      const saved = await oldData.save();
+      if (!saved) {
+        res.json({
+          error: "cannot saved data",
+          _id: _id
+        });
+      } else {
+        res.json({
+          result: "successfully deleted",
+          _id: _id
+        });
+      }
     }
   });   
 };
