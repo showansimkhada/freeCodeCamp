@@ -1,41 +1,37 @@
 'use strict';
 
+const IssueModel = require('../model/model.js').Issue;
+const ProjectModel = require('../model/model.js').Project;
+const mongoose = require('mongoose');
+const ObjectId = mongoose.Types.ObjectId;
+
 module.exports = (app) => {
   app.route('/api/issues/:project')
-  .get(function (req, res){
+  .get(async (req, res) => {
     let project = req.params.project;
-    const {
-      _id,
-      open,
-      issue_title,
-      issue_text,
-      created_by,
-      assigned_to,
-      status_text
-    } = req.query
-
-    // Filters
-    ProjectModel.aggregate([
-      { $match: { name: project}},
-      { $unwind: "$issues"},
-      _id != undefined ? { $match: {"issues._id": ObjectID(_id)}} : { $match: {}},
-      open != undefined ? { $match: {"issues.open": open}} : { $match: {}},
-      issue_title != undefined ? { $match: {"issues.issue_title": issue_title}} : {$match: {}},
-      issue_text != undefined ? {$match: {"issues.issue_text": issue_text}} : {$match: {}},
-      created_by != undefined ? {$match: {"issues.created_by": created_by}} : {$match: {}},
-      assigned_to != undefined ? {$match: {"issues.assigned_to": assigned_to}} : {$match: {}},
-      status_text != undefined ? {$match: {"issues.status_text": status_text}} : {$match: {}}
-    ]).exec((err, data) => {
-      const issues = data.map(x => x.issues);
-      if(!issues) {
-        res.json([]);
-      } else {
-        res.json(issues);
-      }
-    });
+    const data = await ProjectModel.findOne({name: project});
+    if(!data) {
+      res.json([]);
+    } else {
+      let array = [];
+      data.issues.map((x) => {
+        array.push({
+          assigned_to: x.assigned_to,
+          status_text: x.status_text,
+          open: true,
+          _id: x._id,
+          issue_title: x.issue_title,
+          issue_text: x.issue_text,
+          created_by: x.created_by,
+          created_on: x.created_on,
+          updated_on: x.updated_on
+        })
+      })
+      res.json(array);
+    }
   })
   
-  .post(function (req, res){
+  .post(async (req, res) => {
     let project = req.params.project;
     let {
       issue_title,
@@ -55,44 +51,41 @@ module.exports = (app) => {
 
     // Create Issue
     const newIssue = new IssueModel({
+      assigned_to: assigned_to || "",
+      status_text: status_text || "",
+      open:true,
       issue_title: issue_title || "",
       issue_text: issue_text || "",
-      created_on: new Date(),
-      updated_on: new Date(),
       created_by: created_by || "",
-      assigned_to: assigned_to || "",
-      open: true,
-      status_text: status_text || ""
+      created_on: new Date(),
+      updated_on: new Date()
     });
 
     // Check for the project if it exists before
-    ProjectModel.findOne({name: project}, (err, oldData) => {
-      // IF doesn't exists
-      if (!oldData) {
-        const newProject = new ProjectModel({ name: project});
-        newProject.issues.push(newIssue);
-        // Save to the database
-        newProject.save((e, data) => {
-          if (e || !data) {
-            res.send("Error in saving data");
-          } else {
-            res.json(newIssue);
-          } 
-        })
+    const oldData = await ProjectModel.findOne({name: project});
+    if (!oldData) {
+      const newProject = new ProjectModel({ name: project});
+      newProject.issues.push(newIssue);
+      // Save to the database
+      const saved = await newProject.save();
+      if (!saved) {
+        res.send("Error in saving data");
       } else {
-        oldData.issues.push(newIssue);
-        // Save to the database
-        oldData.save((e, data) => {
-          if (e || !data) {
-            res.send("Error in saving data");
-          } else {
-            res.json(newIssue);
-          }
-        })
+        res.json(newIssue);
       }
-    })
+    } else {
+      oldData.issues.push(newIssue);
+      // Save to the database
+      const saved = await oldData.save();
+      if (!saved) {
+        res.send("Error in saving data");
+      } else {
+        res.json(newIssue);
+      }
+    }
   })
-  .put(function (req, res){
+
+  .put(async (req, res) => {
     let project = req.params.project;
     const {
       _id,
@@ -100,13 +93,9 @@ module.exports = (app) => {
       issue_text,
       created_by,
       assigned_to,
-      status_text
+      status_text,
+      open
     } = req.body;
-
-    if (!_id) {
-      res.json({error: "missing _id"});
-      return;
-    }
 
     if (
       !issue_text &&
@@ -120,47 +109,54 @@ module.exports = (app) => {
     }
 
     // Check for the project if it exists before
-    ProjectModel.findOne({name: project}, (err, oldData) => {
-      // IF doesn't exists
-      if (!oldData || err) {
+    const oldData = await ProjectModel.findOne({name: project});
+    if (!oldData) {
+      res.json({
+        error: "could not found project",
+        _id: _id
+      });
+      return;
+    } else {
+      const issueArray = oldData.issues.map((x) => x);
+      const index = issueArray.findIndex(x => x['_id'] == _id);
+      if (index === -1) {
+        console.log('not found')
         res.json({
-          error: "could not update",
+          error: "could not found issue",
           _id: _id
         });
+        return;
       } else {
-        const issueData = oldData.issues.id(ObjectID(_id));
-        if (!issueData) {
+        issueArray[index]['issue_title'] = issue_title || issueArray[index]['issue_title'];
+        issueArray[index]['issue_text'] = issue_text || issueArray[index]['issue_text'];
+        issueArray[index]['status_text'] = status_text || issueArray[index]['status_text'];
+        issueArray[index]['created_by'] = created_by || issueArray[index]['created_by'];
+        issueArray[index]['assigned_to'] = assigned_to || issueArray[index]['assigned_to'];
+        issueArray[index]['updated_on'] = new Date();
+        issueArray[index]['open'] = open || issueArray[index]['open'];
+        // Save to the database
+        var da = [...issueArray];
+        oldData.issues = [];
+        oldData.issues = da;
+        const saved = await oldData.save();
+        if (!saved) {
           res.json({
             error: "could not update",
             _id: _id
           });
           return;
+        } else {
+          res.json({
+            result: "successfully updated",
+            _id: _id
+          });
+          return;
         }
-        issueData.issue_title = issue_title || issueData.issue_title;
-        issueData.issue_text = issue_text || issueData.issue_title;
-        issueData.created_by = created_by || issueData.created_by;
-        issueData.assigned_to = assigned_to || issueData.assigned_to;
-        issueData.updated_on = new Date();
-        issueData.open = true;
-        // Save to the database
-        oldData.save((e, data) => {
-          if (e || !data) {
-            res.json({
-              error: "could not update",
-              _id: _id
-            });
-          } else {
-            res.json({
-              result: "successfully updated",
-              _id: _id
-            });
-          }
-        })
       }
-    })
+    }
   })
     
-  .delete(function (req, res){
+  .delete(async (req, res) => {
     let project = req.params.project;
     const _id = req.body._id;
     if (!_id) {
@@ -168,32 +164,24 @@ module.exports = (app) => {
         error: "missing _id"
       });
       return;
-    } 
-    console.log(project);
-    ProjectModel.findOne({name: project}, (err, oldData) => {
-      const issues = oldData.issues.id(_id);
-      if (!issues || err) {
-        res.json({
-          error: "could not delete",
-          _id: _id
-        });
-      } else {
-        issues.remove();
-        oldData.save((e, data) => {
-          if (e || !data) {
-            res.json({
-              error: "could not delete",
-              _id: _id
-            });
-          } else {
-            res.json({
-              result: "successfully deleted",
-              _id: _id
-            });
-            return;
-          }
-        })
-      }
-    })    
+    }
+    const oldData = await ProjectModel.findOne({name: project});
+    var array = oldData.issues.map((x) => x);
+    var index = array.findIndex(x => x['_id'] == _id);
+    var da = [...array.slice(0, index),
+      ...array.slice(index+1)]
+    oldData.issues = da;
+    const saved = await oldData.save();
+    if (!saved) {
+      res.json({
+        error: "cannot saved data",
+        _id: _id
+      });
+    } else {
+      res.json({
+        result: "successfully deleted",
+        _id: _id
+      });
+    }
   });   
 };

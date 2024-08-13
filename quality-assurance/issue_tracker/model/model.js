@@ -26,8 +26,14 @@ const IssueSchema = new Schema({
         type: Boolean,
         default: true
     },
-    created_on: String,
-    updated_on: String
+    created_on: {
+        type: Date,
+        default: Date()
+    },
+    updated_on: {
+        type: Date,
+        default: Date()
+    }
 });
 const Issue = mongoose.model("Issue", IssueSchema);
 
@@ -36,7 +42,7 @@ const ProjectSchema = new Schema({
         type: String,
         required: true
     },
-    issues: [IssueSchema]
+    issues: []
 })
 const Project = mongoose.model("Project", ProjectSchema);
 
