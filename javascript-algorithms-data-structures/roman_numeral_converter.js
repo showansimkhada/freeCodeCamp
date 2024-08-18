@@ -9,7 +9,7 @@ function convertToRoman(num) {
             str += romNum[i]
         }
     }
-    return str.toUpperCase();
+    return str;
 }
    
-convertToRoman(29);
+console.log(convertToRoman(29));

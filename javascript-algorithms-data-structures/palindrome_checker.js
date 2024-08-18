@@ -21,4 +21,4 @@ function palindrome(str) {
     }
 }
 
-palindrome("My age is 0, 0 si ega ym.");
+console.log(palindrome("My age is 0, 0 si ega ym."));
