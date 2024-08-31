@@ -36,7 +36,7 @@ const ThreadModel = new Schema({
         type: Boolean,
         default: false
     },
-    deleate_password: {
+    delete_password: {
         type: String
     },
     replies: [ReplyModel]
