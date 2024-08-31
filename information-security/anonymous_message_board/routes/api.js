@@ -32,7 +32,6 @@ module.exports = function (app) {
             if (!saved) {
                 res.json("thread post: cannot be saved");
             } else {
-                res.json(nT);
                 res.redirect('/b/' + board + '/');
             }
         } else {
@@ -41,7 +40,6 @@ module.exports = function (app) {
             if (!saved) {
                 res.json("thread post: cannot be saved");
             } else {
-                res.json(fB);
                 res.redirect('/b/' + board + '/');
             }
         }
@@ -51,7 +49,51 @@ module.exports = function (app) {
     // board with only the most recent 3 replies for each. The reported and delete_password 
     // fields will not be sent to the client.
     .get(async (req, res) => {
-        
+        var board = req.params.board;
+        var thread_id = req.query.thread_id;
+        let fB = await Board.findOne({name: board});
+        if (!fB) {
+            res.json('Not Found')
+        } else {
+            var threads = fB.threads.map((thread) => {
+                const {
+                    _id,
+                    text,
+                    created_on,
+                    bumped_on,
+                    replies
+                } = thread;
+                thread.replies.sort((a, b) => {
+                    return new Date(b.bumped_on) - new Date(a.bumped_on);
+                });
+                var th = thread.replies.map((reply) => {
+                    const {
+                        _id,
+                        text,
+                        created_on
+                    } = reply;
+                    return {
+                        _id,
+                        text,
+                        created_on
+                    }
+                })
+                return {
+                    _id,
+                    text,
+                    created_on,
+                    bumped_on,
+                    replies: th.slice(0, 3),
+                    replycount: thread.replies.length
+                }
+            });
+            threads.sort((a, b) => {
+                return new Date(b.bumped_on) - new Date(a.bumped_on);
+            })
+            const th = threads.slice(0, 10)
+            if (!threads) return res.json('Not found')
+            res.json(threads)
+        }
     })
     // You can send a DELETE request to /api/threads/{board} and pass 
     // along the thread_id & delete_password to delete the thread. 
@@ -78,7 +120,57 @@ module.exports = function (app) {
     // Returned will be the entire thread with all its replies, also excluding 
     // the same fields from the client as the previous test.
     .get(async (req, res) => {
-
+        var threads;
+        var board = req.params.board;
+        var thread_id = req.query.thread_id;
+        var fB = await Board.findOne({name: board});
+        if (!fB) {
+            res.json("couldn't found data")
+        } else {
+            var th = fB.threads.map((thread) => {
+                const {
+                    _id,
+                    text,
+                    created_on,
+                    bumped_on,
+                    replies
+                } = thread;
+                thread.replies.sort((a, b) => {
+                    return new Date(b.bumped_on) - new DataTransfer(a.bumped_on);
+                })
+                var rep = thread.replies.map((reply) => {
+                    const {
+                        _id,
+                        text,
+                        created_on
+                    } = reply;
+                    return {
+                        _id,
+                        text,
+                        created_on
+                    }
+                })
+                return {
+                    _id,
+                    text,
+                    created_on,
+                    bumped_on,
+                    replies: rep
+                }
+            })
+            for (let i = 0; i < th.length; i++){
+                if (th[i]._id == thread_id) {
+                    console.log(th[i])
+                    threads = th[i];
+                    break;
+                }
+            }
+        }
+        if(threads) {
+             res.json(threads);
+        } else {
+            res.json('Not found')
+        }
     })
     // You can send a PUT request to /api/replies/{board} and pass along 
     // the thread_id & reply_id. Returned will be the string reported. 
