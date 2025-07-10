@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Checkout Page</title>
+    </head>
+    <body>
+        <h1>Checkout</h1>
+        <section>
+            <h2>Your Cart</h2>
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/spoon.jpg" alt="left handed spoon">
+            <p>$29.99</p>
+        </section>
+        <section>
+            <h2>Payment Information</h2>
+            <form method="POST">
+                <label for="card-name">Cardholder Name</label>
+                <input id="card-name" name="card-name" type="text" required aria-required="true"></input>
+                
+                <label for="card-number">Card Number</label>
+                <input id="card-number" name="card-number" required aria-required="true"></input>
+                <label for="card-expriy">Expiry Date</label>
+                <input id="card-expiry" name="card-expire" type="date" required aria-required="true"></input>
+                <label for="card-cvv">CVV</label>
+                <input id="card-cvv" name="card-cvv" required aria-required="true"></input>
+                <input type="submit">Place Order</input>
+            </form>
+        </section>
+    </body>
+</html>
