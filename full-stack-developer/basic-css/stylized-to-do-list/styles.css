@@ -1,0 +1,37 @@
+.sub-item-link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:focus {
+    outline: 1px solid green;
+}
+
+a:active {
+    color: orange;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.sub-item {
+    list-style-type: disc;
+}
+
+.list-items {
+    width: auto;
+    height: 100px;
+    background-color: lightgreen;
+}
+
+li {
+    margin-top: 30px;
+}
