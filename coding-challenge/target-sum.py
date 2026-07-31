@@ -15,15 +15,25 @@ Passed: 4. find_target([1, 3, 5, 7], 14) should return 'Target not found'.
 
 def find_target(arr, target):
     result = []
-    for i in range(len(arr)-1):
-        if arr[i] + arr[i+1] == target:
-            result.append(i)
-            result.append(i+1)
+    for num in arr:
+        find = target - num
+        index1 = arr.index(num)
+        try:
+            index2 = arr.index(find)
+        except ValueError:
+            continue
+        if index1 != index2 or num != find:
+            result.append(index1)
+            result.append(index2)
+            break  
     if result:
-        return result
-    return 'Target not found'
+        return sorted(result)
+    else:
+        return 'Target not found'
 
-print(find_target([2, 7, 11, 15], 9))
+    
+
+print(find_target([7, 11, 15, -2], 9))
 print(find_target([3, 2, 4, 5], 6))
 print(find_target([1, 3, 5, 6, 7, 8], 15))
-print(find_target([1, 3, 5, 7], 14))
+print(find_target([1, 3, 3, 5, 7], 14))
