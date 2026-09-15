@@ -1,0 +1,48 @@
+:root {
+  --color0: #0a3;
+  --color1: #2fb;
+  --color2: #1ba;
+  --color3: #faa;
+  --color4: #aa0;
+  --color5: #bbf;
+  --solid-border: 1vw solid black;
+  --dashed-border: 1vw dashed black;
+}
+
+.available-0 {
+  background-color: var(--color0);
+}
+
+.available-1 {
+  background-color: var(--color1);
+}
+
+.available-2 {
+  background-color: var(--color2);
+}
+
+.available-3 {
+  background-color: var(--color3);
+}
+
+.available-4 {
+  background-color: var(--color4);
+}
+
+.available-5 {
+  background-color: var(--color5);
+}
+
+.sharp td {
+  border-bottom: var(--solid-border);
+}
+
+.half td {
+  border-bottom: var(--dashed-border);
+}
+
+#legend-gradient {
+  background-color: linear-gradient(var(--color0), var(--color1) 10%, var(--color3) 35%, transparent 10%,
+  transparent 50%
+  )
+}
